@@ -1,0 +1,4 @@
+@import "./abstracts/variables";
+@import "./abstracts/functions";
+@import "./abstracts/mixins";
+//全.vueファイルにインポートしたい（具体的なCSSを吐かない）ものはprepends.scssに入れる

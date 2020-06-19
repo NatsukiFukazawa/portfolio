@@ -8,7 +8,19 @@
   </div>
 </template>
 
+<script>
+import myheader from './components/myheader'
+
+export default {
+  name: 'App',
+  components: {
+    myheader
+  },
+}
+</script>
+
 <style lang="scss">
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
