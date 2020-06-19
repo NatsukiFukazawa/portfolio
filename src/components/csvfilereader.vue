@@ -1,6 +1,19 @@
 <template>
-  <div>
-    <input type="file" @change="loadCsvFile" />
+<div>
+  <div class="form-group">
+    <label for="inputFile">File input</label>
+    <div class="input-group">
+      <div class="custom-file">
+        <input type="file" class="custom-file-input" id="inputFile" @change="loadCsvFile">
+        <label class="custom-file-label" for="inputFile" data-browse="参照">ファイルを選択(ここにドロップすることもできます)</label>
+      </div>
+      <div class="input-group-append">
+        <button v-on:click="Filereset" type="button" class="btn btn-outline-secondary input-group-text" id="inputFileReset">取消</button>
+      </div>
+    </div>
+  </div>
+  
+  
     <p>{{ message }}</p>
  
     <table align ="center" border="1">
@@ -9,10 +22,14 @@
         
       </tr>
     </table>
-    <button v-on:click="downloadCSV">ダウンロード</button>
+    
+    <button type="button" class="btn btn-success" v-on:click="downloadCSV">ダウンロード</button>
+    
   </div>
 </template>
  
+
+ <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.js"></script>
 <script>
 export default {
     name:"csvfilereader",
@@ -48,6 +65,23 @@ export default {
       };
     },
 
+
+    bsCustomFileInput(){
+      bsCustomFileInput.init();
+    },
+
+
+    Filereset(){
+      bsCustomFileInput.init();
+      document.getElementById('inputFileReset').addEventListener('click', function() {
+        var elem = document.getElementById('inputFile');
+        elem.value = '';
+        elem.dispatchEvent(new Event('change'));
+        this.workers =[]
+      });
+    },
+
+
     downloadCSV () {
       var csv ='\ufeff';
       this.workers.forEach(worker => {
@@ -68,6 +102,8 @@ export default {
 </script>
 
 <style scoped>
-
+div{
+  padding:0 40px
+}
 
 </style>

@@ -1,6 +1,8 @@
 <template>
     <div>
-    <h1>test1</h1>
+    <h1>csvfilereader</h1>
+     
+    <p>csvファイルを読み込んで表示します</p>
     <csvfilereader></csvfilereader>
     </div>
 </template>
