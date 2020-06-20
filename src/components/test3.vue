@@ -1,6 +1,17 @@
 <template>
-    <div>   
-     <h1>test3</h1>
-     <h2>好きなもの</h2>
-    </div>
+  <div>
+    <h2>好きなもの</h2>
+
+    <ul>
+      <li>
+        <p>ゲーム</p>
+      </li>
+    </ul>
+  </div>
 </template>
+
+<style scoped>
+ul {
+  list-style: none;
+}
+</style>

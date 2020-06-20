@@ -1,27 +1,28 @@
 <template>
   <div id="app">
+    <top></top>
     <myheader></myheader>
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <router-view />
+    <myfooter></myfooter>
   </div>
 </template>
 
 <script>
-import myheader from './components/myheader'
+import myheader from "./components/myheader";
+import myfooter from "./components/footer";
+import top from "./components/top";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    myheader
+    myheader,
+    myfooter,
+    top,
   },
-}
+};
 </script>
 
 <style lang="scss">
-
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
