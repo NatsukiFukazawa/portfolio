@@ -1,9 +1,9 @@
 <template>
   <div>
-    <h1>
-      このページはTwitterなどで見かけた面白そうなアニメーションなどを盛り込んだものになっております
-    </h1>
-    <h2>csvfilereader</h2>
+    <h2>
+      ガラクタ置き場
+    </h2>
+    <h2>１,csvfilereader</h2>
     <p>csvファイルを読み込んで表示します</p>
     <csvfilereader></csvfilereader>
   </div>

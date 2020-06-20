@@ -8,8 +8,6 @@
             <h2>
                 {{name}}'s portfolio
             </h2>
-
-            
        </div>
     </div>
 </template>

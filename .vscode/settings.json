@@ -3,5 +3,10 @@
   "eslint.options": {
     "extensions": [".js", ".vue"]
   },
-  "eslint.validate": ["javascript", "vue"]
+  "eslint.validate": ["javascript", "vue"],
+  "emmet.includeLanguages": {
+    "erb": "html",
+    "vue": "html",
+    "vue": "css"
+  }
 }
