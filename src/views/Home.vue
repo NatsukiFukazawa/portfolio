@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <HelloWorld msg="Welcome to My portfolio Site!" />
+    <HelloWorld msg="Welcome to My portfolio Site!このサイト特徴をいれる " />
   </div>
 </template>
 

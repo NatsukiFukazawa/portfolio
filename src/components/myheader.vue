@@ -6,9 +6,7 @@
           <li class="nav-item">
             <router-link class="text-white px-3" to="/">home</router-link>
           </li>
-          <li class="nav-item">
-            <router-link class="text-white px-3" to="/scrap">scrap</router-link>
-          </li>
+
           <li class="nav-item">
             <router-link class="text-white px-3" to="/career"
               >career</router-link
@@ -18,6 +16,9 @@
             <router-link class="text-white px-3" to="/skills"
               >skills</router-link
             >
+          </li>
+          <li class="nav-item">
+            <router-link class="text-white px-3" to="/scrap">scrap</router-link>
           </li>
         </ul>
       </div>

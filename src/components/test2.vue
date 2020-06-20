@@ -1,22 +1,25 @@
 <template>
   <div class="career">
-    <h2>経歴</h2>
+    <h2>History</h2>
 
     <ul>
-      <li>大学に入学するも怠惰な生活をおくる</li>
-      <img src="" alt="" />
+      <li>2019/04大学でのバイト</li>
+
       <li>
-        2020年06月に就職活動の一環として業界選びをしていたところweb系エンジニアという職種を見つける
+        2019/04toeic725
       </li>
       <li>
-        なんとかweb系エンジニアに就職するため残り10ヶ月でwebアプリケーション作成まで仕上げていく(予定)
+        Vue.jsでポートフォリオ作成
       </li>
     </ul>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.career ul {
-  list-style: none;
+.career {
+  @include top-height;
+  ul {
+    list-style: none;
+  }
 }
 </style>
