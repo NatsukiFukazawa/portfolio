@@ -1,6 +1,10 @@
 <template>
   <div class="career">
-    <h2>History</h2>
+    <ul>
+      <li>
+        <h2>History</h2>
+      </li>
+    </ul>
 
     <ul>
       <li>
@@ -14,7 +18,9 @@
         <p>院試のために受けました</p>
       </li>
 
-      <li><h4>2019/06 pythonでニューラルネットワーク実装</h4></li>
+      <li>
+        <h4>2019/06 pythonでニューラルネットワーク実装</h4>
+      </li>
       <p>本当に単純なものです</p>
 
       <li>

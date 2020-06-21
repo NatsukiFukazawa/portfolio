@@ -7,9 +7,7 @@
         <div class="container">
           <p>python</p>
           <div class="description">
-            <p>
-              実務未経験で研究でニューラルネットワークを用いた分類器の実装やログの整形などで使用しています。
-            </p>
+            <p>実務未経験で研究でニューラルネットワークを用いた分類器の実装やログの整形などで使用しています。</p>
           </div>
         </div>
       </li>
@@ -17,9 +15,7 @@
         <div class="container">
           <p>java</p>
           <div class="description">
-            <p>
-              大学の教授が自作して一時的に使用していた出席管理用のjavaで書かれたandroidアプリケーションの一部改良を行ったことがあります。
-            </p>
+            <p>大学の教授が自作して一時的に使用していた出席管理用のjavaで書かれたandroidアプリケーションの一部改良を行ったことがあります。</p>
           </div>
         </div>
       </li>
@@ -27,9 +23,7 @@
         <div class="container">
           <p>C#</p>
           <div class="description">
-            <p>
-              大学の教授が自作して一時的に使用していた出席管理用のC#で書かれたwindowsアプリケーションの一部改良を行ったことがあります。
-            </p>
+            <p>大学の教授が自作して一時的に使用していた出席管理用のC#で書かれたwindowsアプリケーションの一部改良を行ったことがあります。</p>
           </div>
         </div>
       </li>
@@ -37,9 +31,7 @@
         <div class="container">
           <p>javascript</p>
           <div class="description">
-            <p>
-              このポートフォリオを作るレベルの知識しかありません。
-            </p>
+            <p>このポートフォリオを作るレベルの知識しかありません。</p>
           </div>
         </div>
       </li>
@@ -85,7 +77,7 @@
   .description {
     font-size: 10px;
     margin: 0 20px;
-    color: forestgreen;
+    color: seagreen;
   }
 }
 </style>

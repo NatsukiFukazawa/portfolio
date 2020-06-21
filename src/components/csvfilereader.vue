@@ -1,17 +1,16 @@
 <template>
   <div class="csvfilereader">
+    <h2>1csvfilereader</h2>
+    <p>csvファイルを読み込んで表示します、ダウンロードボタンで表示したcsvファイルをダウンロードできます。</p>
     <div class="form-group">
       <div class="input-group">
         <div class="custom-file">
-          <input
-            type="file"
-            class="custom-file-input"
-            id="inputFile"
-            @change="loadCsvFile"
-          />
-          <label class="custom-file-label" for="inputFile" data-browse="参照">{{
+          <input type="file" class="custom-file-input" id="inputFile" @change="loadCsvFile" />
+          <label class="custom-file-label" for="inputFile" data-browse="参照">
+            {{
             message
-          }}</label>
+            }}
+          </label>
         </div>
         <div class="input-group-append">
           <button
@@ -19,9 +18,7 @@
             type="button"
             class="btn btn-outline-secondary input-group-text"
             id="inputFileReset"
-          >
-            取消
-          </button>
+          >取消</button>
         </div>
       </div>
     </div>
@@ -35,9 +32,7 @@
       type="button"
       class="btn btn-outline-secondary input-group-text download"
       v-on:click="downloadCSV"
-    >
-      ダウンロード
-    </button>
+    >ダウンロード</button>
   </div>
 </template>
 <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.js"></script>
