@@ -2,9 +2,9 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import BootstrapVue from "bootstrap-vue"; // added
 import Home from "../views/Home.vue";
-import test1 from "@/components/test1";
-import test2 from "@/components/test2";
-import test3 from "@/components/test3";
+import scrap from "@/components/scrap";
+import skills from "@/components/skills";
+import career from "@/components/career";
 
 Vue.use(VueRouter);
 Vue.use(BootstrapVue); // added
@@ -30,17 +30,17 @@ const routes = [
   {
     path: "/scrap",
     name: "scrap",
-    component: test1,
+    component: scrap,
   },
   {
     path: "/career",
     name: "career",
-    component: test2,
+    component: career,
   },
   {
     path: "/skills",
     name: "skills",
-    component: test3,
+    component: skills,
   },
 ];
 

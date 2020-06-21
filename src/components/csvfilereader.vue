@@ -1,7 +1,6 @@
 <template>
-  <div>
+  <div class="csvfilereader">
     <div class="form-group">
-      <label for="inputFile">File input</label>
       <div class="input-group">
         <div class="custom-file">
           <input
@@ -10,9 +9,9 @@
             id="inputFile"
             @change="loadCsvFile"
           />
-          <label class="custom-file-label" for="inputFile" data-browse="参照"
-            >ファイルを選択(ここにドロップすることもできます)</label
-          >
+          <label class="custom-file-label" for="inputFile" data-browse="参照">{{
+            message
+          }}</label>
         </div>
         <div class="input-group-append">
           <button
@@ -26,13 +25,17 @@
         </div>
       </div>
     </div>
-    <p>{{ message }}</p>
-    <table align="center" border="1">
-      <tr v-for="(worker, index) in workers" :key="index">
+
+    <table align="center" border="1" v-if="axis1 != []">
+      <tr v-for="(worker, index) in axis1" :key="index">
         <td v-for="(column, index) in worker" :key="index">{{ column }}</td>
       </tr>
     </table>
-    <button type="button" class="btn btn-success" v-on:click="downloadCSV">
+    <button
+      type="button"
+      class="btn btn-outline-secondary input-group-text download"
+      v-on:click="downloadCSV"
+    >
       ダウンロード
     </button>
   </div>
@@ -43,14 +46,14 @@ export default {
   name: "csvfilereader",
   data() {
     return {
-      message: "",
-      workers: [],
+      message: "ファイルを選択してください(ドラッグでもできます)",
+      axis1: [],
     };
   },
   methods: {
     loadCsvFile(e) {
       let vm = this;
-      vm.workers = [];
+      vm.axis1 = [];
       vm.message = "";
       let file = e.target.files[0];
       if (!file.type.match("text/csv")) {
@@ -61,12 +64,12 @@ export default {
       reader.readAsText(file);
       reader.onload = () => {
         let lines = reader.result.split("\n");
-        lines.shift(); //最初の要素削除
+        lines.pop(); //最初の要素削除
         let linesArr = [];
         for (let i = 0; i < lines.length; i++) {
           linesArr[i] = lines[i].split(",");
         }
-        vm.workers = linesArr;
+        vm.axis1 = linesArr;
       };
     },
 
@@ -75,20 +78,18 @@ export default {
     },
 
     Filereset() {
-      bsCustomFileInput.init();
-      document
-        .getElementById("inputFileReset")
-        .addEventListener("click", function () {
-          var elem = document.getElementById("inputFile");
-          elem.value = "";
-          elem.dispatchEvent(new Event("change"));
-          this.workers = [];
-        });
+      this.message = "ファイルを選択して!(ドラッグでもできます)";
+
+      this.axis1 = [];
     },
 
     downloadCSV() {
+      if (this.axis1 == []) {
+        this.message = "csvファイルは読み込まれていません";
+        return;
+      }
       var csv = "\ufeff";
-      this.workers.forEach((worker) => {
+      this.axis1.forEach((worker) => {
         worker.forEach((index) => {
           csv += index + ",";
         });
@@ -104,8 +105,17 @@ export default {
 };
 </script>
 
-<style scoped>
-div {
-  padding: 0 40px;
+<style lang="scss" scoped>
+.csvfilereader {
+  padding: 0 250px;
+  .download {
+    margin: 0 auto;
+  }
+
+  .custom-file-input {
+    &:hover {
+      color: cyan;
+    }
+  }
 }
 </style>
