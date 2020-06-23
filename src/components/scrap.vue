@@ -4,7 +4,7 @@
 
     <p>ここには具体的な使用法を見つけられなかった実装を置いています。</p>
 
-    <div class="scrap-list">
+    <!--<div class="scrap-list">
       <csvfilereader></csvfilereader>
     </div>
 
@@ -21,28 +21,45 @@
     <div class="scrap-list">
       <h2>4 api使用</h2>
       <p></p>
-
-      <div class="scrap-list">
-        <todo />
-      </div>
+    </div>-->
+    <div class="scrap-list">
+      <todo />
     </div>
   </div>
 </template>
 
 <script>
-import csvfilereader from "./csvfilereader.vue";
+//import csvfilereader from "./csvfilereader.vue";
 import todo from "@/components/todo";
 
 export default {
   name: "test1",
   components: {
-    csvfilereader,
-    todo
+    //csvfilereader,
+    todo,
   },
 };
 </script>
 <style lang="scss" scoped>
 .scrap {
   height: 1000px;
+
+  .scrap-list {
+    margin-top: 20px;
+  }
+  @media (max-width: 1000px) {
+  }
+
+  /* スマホ向けレイアウト */
+
+  @media (max-width: 670px) {
+    h2 {
+      font-size: 25px;
+    }
+    p {
+      font-size: 15px;
+      margin: 0 20px;
+    }
+  }
 }
 </style>

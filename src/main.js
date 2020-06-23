@@ -10,6 +10,11 @@ import { far } from "@fortawesome/free-regular-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import "bootstrap/dist/css/bootstrap.css"; //Add
+import "bootstrap-vue/dist/bootstrap-vue.css"; //Add
+import BootstrapVue from "bootstrap-vue"; // Add
+
+Vue.use(BootstrapVue);
 
 // FontAwesome Setup
 library.add(faBookmark);

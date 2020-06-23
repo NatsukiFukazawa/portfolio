@@ -1,19 +1,10 @@
 <template lang="ja">
     <div class =top>
-       <div style="background: url(../assets/top_background.jpg);">
-            
-            <h2>
-                {{name}}'s portfolio
-            </h2>
-            <div class = "share">
-        
-        <a class = 'github' href="https://github.com/NatsukiFukazawa/">
-      <font-awesome-icon :icon="['fab', 'github']" /></a
-    > <a class = 'twitter' href="https://twitter.com/nNrzdpt05AQkVAD"
-      ><font-awesome-icon :icon="['fab', 'twitter']" /></a
-    >
+      <div> 
+        <h2>
+          {{name}}'s portfolio
+        </h2>
       </div>
-       </div>
     </div>
 </template>
 
@@ -38,31 +29,34 @@ export default {
   background-image: url("../assets/top_background_2.jpg");
   height: 400px;
   background-size: cover;
+  display: flex;
+  justify-content: center;
   h2 {
     color: cyan;
     font-family: "Courier New", Courier, monospace;
     padding-top: 150px;
     font-size: 50px;
-    text-shadow: black;
   }
-  .twitter {
-    font-size: 3em;
-    margin: 10px;
-    &:hover {
-      opacity: 0.5;
-    }
-  }
-  .github {
-    color: black;
-    font-size: 3em;
-    margin: 10px;
 
-    &:hover {
-      opacity: 0.5;
-    }
-  }
   .share {
     margin: 30px;
+  }
+
+  /* タブレット向けレイアウト */
+  @media (max-width: 1000px) {
+    .top {
+      height: 200px;
+      font-size: 5px;
+    }
+  }
+
+  /* スマホ向けレイアウト */
+  /* ブレイクポイントが670px以下の時のメディアクエリを設定してください */
+  @media (max-width: 670px) {
+    /* .flex-list liにmarginを0 autoに指定してください */
+    .flex-list li {
+      margin: 0 auto;
+    }
   }
 }
 </style>
