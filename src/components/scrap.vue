@@ -1,6 +1,6 @@
 <template>
   <div class="scrap">
-    <h2>ガラクタ置き場</h2>
+    <h2>scraps</h2>
 
     <p>ここには具体的な使用法を見つけられなかった実装を置いています。</p>
 
@@ -42,6 +42,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .scrap {
+  margin-top: 20px;
   height: 1000px;
 
   .scrap-list {

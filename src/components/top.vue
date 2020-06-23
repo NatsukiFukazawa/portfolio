@@ -33,8 +33,8 @@ export default {
   justify-content: center;
   h2 {
     color: cyan;
-    font-family: "Courier New", Courier, monospace;
-    padding-top: 150px;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    padding-top: 190px;
     font-size: 50px;
   }
 

@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>About</h1>
+    <h2>About</h2>
 
     <table
       class="about-table"
@@ -50,9 +50,7 @@
 
 <style lang="scss" scoped>
 .about {
-  hi {
-    margin: 0 auto;
-  }
+  margin-top: 20px;
   table {
     width: "500px";
   }

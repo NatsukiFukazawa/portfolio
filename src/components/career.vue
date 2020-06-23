@@ -1,11 +1,7 @@
 <template>
   <div class="career">
     <b-container>
-      <b-list-group flush horizontal>
-        <b-list-group-item>
-          <h2>History</h2>
-        </b-list-group-item>
-      </b-list-group>
+      <h2>History</h2>
 
       <b-list-group flush horizontal="lg">
         <b-list-group-item>
@@ -56,6 +52,7 @@
 
 <style lang="scss" scoped>
 .career {
+  margin-top: 20px;
   @include top-height;
   ul {
     list-style: none;
