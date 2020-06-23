@@ -2,13 +2,7 @@
   <div class="about">
     <h2>About</h2>
 
-    <table
-      class="about-table"
-      border="1"
-      cellspacing="0"
-      cellpadding="5"
-      bordercolor="white"
-    >
+    <table class="about-table" border="1" cellspacing="0" cellpadding="5" bordercolor="white">
       <tr>
         <td bgcolor align="right">name</td>
         <td>深澤那月</td>
@@ -20,10 +14,7 @@
       <tr>
         <td bgcolor align="right" nowrap>
           twitter
-          <font-awesome-icon
-            style="color: #55acee;"
-            :icon="['fab', 'twitter']"
-          />
+          <font-awesome-icon style="color: #55acee;" :icon="['fab', 'twitter']" />
         </td>
         <td>
           <a href="https://twitter.com/nNrzdpt05AQkVAD">なつき</a>
@@ -54,8 +45,7 @@
   table {
     width: "500px";
   }
-  @include top-height;
-  padding: auto;
+
   .about-table {
     margin: 0 auto;
   }
@@ -72,7 +62,6 @@
 }
 
 /* スマホ向けレイアウト */
-/* ブレイクポイントが670px以下の時のメディアクエリを設定してください */
 @media (max-width: 670px) {
   table {
     width: 300px;
